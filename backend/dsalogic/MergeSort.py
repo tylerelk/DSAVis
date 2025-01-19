@@ -33,9 +33,3 @@ def MergeSort(array):
     sortLeft = MergeSort(left)
     sortRight = MergeSort(right)
     return Merge(sortLeft, sortRight)
-
-print(MergeSort([3, 1, 6, 2, 9, 4, 11, 15]))
-print(MergeSort([900, -14, -222, 5, 22, 9, 7, -4, -4]))
-print(MergeSort([]))
-print(MergeSort([9]))
-print(MergeSort([2, -99]))
