@@ -28,8 +28,15 @@ Pseudocode:
 
 Analysis:
 - Time complexity:
-    - At worst, Quick Sort runs at O(n^2), but has high probability of running at O(nlogn)
-- Space complexity: O(1)
+    - If Partition always returns the element at the center of the array or sub-array, time complexity results in O(nlogn)
+    - However, if Partition returns elements at the beggining or end of the list every time, time complexity is O(n^2)
+        - This happens if the list is already sorted
+- Space complexity:
+    - Similar to time complexity, the space complexity is determined by the position of the partition:
+        - Worst case: O(n)
+            - Occurs if the list is already sorted or nearly sorted, as the call stack increases
+        - Best case: O(logn)
+            - Occurs if the partition is centered in the array, since the call stack will reduce on the left before calling the right
 '''
 
 def QuickSort(arr, low = 0, high = None):
